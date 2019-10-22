@@ -1,3 +1,4 @@
+/* Creating MEC matrix in (ω,q) domain */
 const int transbins_nu = 13;
 const int longbins_nu = 12;
 const int dim = 24;
@@ -48,13 +49,13 @@ void makeMatrix()
 		  double kos = e->out[0].z / e->out[0].momentum();
 		  noPionsEventsCounter++;
 
-		  if (kos > kosmin) {
+		  if (kos > kosmin) { // first cut
 		    double muonlong = e->out[0].z;
 		    double muontrans = sqrt((e->out[0].x) * (e->out[0].x) + (e->out[0].y) * (e->out[0].y));
 		    double entrans = e->in[0].t - e->out[0].t;
 		    double momtrans2 = entrans * entrans - e->q2();
 
-		    if (muonlong >= 1500.00 && muonlong <= 20000.00) {
+		    if (muonlong >= 1500.00 && muonlong <= 20000.00) { // second cut
 				x = position(muonlong, long_nu_left, longbins_nu);
 				y = position(muontrans, trans_nu_left, transbins_nu);
 

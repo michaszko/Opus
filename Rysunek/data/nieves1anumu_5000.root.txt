@@ -1,0 +1,2 @@
+dyn  n        ratio          sigma[cm2] 
+8   100               1     1.74051e-39

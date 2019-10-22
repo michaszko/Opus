@@ -1,3 +1,5 @@
+/* 	Program for obtaing results of NuWro in (p_T,p_L) domain.
+	Used later to compare results to MINERvA experiment (cross sections). */
 const int transbins_nu = 13;
 const int longbins_nu = 12;
 
@@ -29,19 +31,6 @@ double cross_results_nu_mec[longbins_nu + 1][transbins_nu + 1];
 
 double results_nu_dis[longbins_nu + 2][transbins_nu + 2];
 double cross_results_nu_dis[longbins_nu + 1][transbins_nu + 1];
-
-/////////////////////////////////////
-
-int position(double a, double *taba, int tabaSize) {
-  int xa = 0;
-
-  for (int i = 0; i < tabaSize; i++) {
-    if (a <= taba[i]) break;
-
-    xa = i;
-  }
-  return xa;
-}
 
 /////////////////////////////////////
 
