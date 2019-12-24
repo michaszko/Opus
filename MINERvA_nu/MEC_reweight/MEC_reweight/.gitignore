@@ -1,0 +1,14 @@
+# python stuff
+__pychache__
+*.pyc
+.mypy_cache
+.ipynb_checkpoints/
+
+# data to work on
+Data/
+*.pkl
+*.pickle
+
+# results
+*.pdf
+*.png
