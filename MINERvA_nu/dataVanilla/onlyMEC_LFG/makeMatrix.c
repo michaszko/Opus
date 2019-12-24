@@ -11,7 +11,7 @@ double kosmin = cos(20.0 * MyPi / 180.0);
 double trans_nu_left[transbins_nu + 1] = {0, 75, 150, 250, 325, 400, 475, 550, 700, 850, 1000, 1250, 1500, 2500};
 double long_nu_left[longbins_nu + 1] = {1500,  2000,  2500, 3000, 3500, 4000, 4500,  5000, 6000, 8000, 10000, 15000, 20000};
 
-char fileName[100]="optimize_test_mec.root";
+char fileName[100]="only_mec.root";
 
 ofstream mat("../../data/matrix_LFG.dat");
 
@@ -71,7 +71,7 @@ void makeMatrix()
 		}
 	}
 
-	cout << noPionsEventsCounter << "\n" << float(noPionsEventsCounter/events) << "\n";
+	cout << "\n" << noPionsEventsCounter << "\n" << float(noPionsEventsCounter)float(events) << "\n";
 
 	cout << "Now priting matrix to file...\n";
 
